@@ -20,9 +20,9 @@
     <div class="card-list">
       <h1>単語帳一覧</h1>
       <ul class="cards">
-        <li class="contents"> <%= link_to 'HTML', "#"%></li>
-        <li class="contents"> <%= link_to 'CSS', "#"%></li>
-        <li class="contents"> <%= link_to 'Ruby', "#"%></li>
+         <% @flashcards.each do |flashcards| %>
+          <li><%= link_to flashcards.name, flashcard_words_path(flashcards.id), class: "content" %></li>
+        <% end %>
       </ul>
     </div>
 

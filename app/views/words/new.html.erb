@@ -1,0 +1,20 @@
+
+<div class="word-register-main">
+
+  <h2 class="word-register-title">単語登録</h2>
+  <%= form_with model: @word, url: flashcard_words_path,local: true do |f|%>
+
+    <div class="word-title">
+      単語名
+    </div>
+      <%= f.text_area :name, class: "word-name", placeholder:"単語"%>
+    <div class="word-title">
+      単語　意味
+    </div>
+      <%= f.text_area :meaning, clss: "word-meaning", placeholder: "単語意味"%>
+    
+    <%= f.submit "登録する",　class:"register-btn"%>
+
+    </div>
+  <% end %>
+</div>

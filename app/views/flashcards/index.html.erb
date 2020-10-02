@@ -27,6 +27,12 @@
     </div>
 
     <%# 登録機能 %>
-    <%=link_to '単語登録', "#"%>
+    <div>
+      <h2>単語帳登録</h2>
+      <%= form_with model: @flashcard, url: flashcards_path, local: true do |f|%>
+      <%= f.text_field :name, placeholder: "単語帳名"%>
+      <%= f.submit "登録"%>
+      <% end %>
+    </div>
   </div>
 </body>
